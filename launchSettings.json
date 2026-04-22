@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "APIKeys_MinimalAPIs": {
+      "commandName": "Docker",
+      "dotnetRunMessages": true
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "dockerfileRunArguments": ""
+    }
+  }
+}
