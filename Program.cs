@@ -1,8 +1,11 @@
 
 using APIKeys_MinimalAPIs;
 using System.Text.Json.Serialization;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.AddValidatorsFromAssemblyContaining<OrderValidator>();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
