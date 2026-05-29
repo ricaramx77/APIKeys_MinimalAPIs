@@ -2,6 +2,7 @@
 using APIKeys_MinimalAPIs;
 using System.Text.Json.Serialization;
 using FluentValidation;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,10 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 builder.Services
     .AddConfigurationOptions()
     .AddApiKeyAuthorization();
+
+builder.Host.UseSerilog((ctx, cnfg) => cnfg
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day));
 
 var app = builder.Build();
 

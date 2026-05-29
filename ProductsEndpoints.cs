@@ -18,7 +18,7 @@ namespace APIKeys_MinimalAPIs
 
             //app.MapPost("/orders", (Order order) => Results.Ok(order)).AddFilter<ValidationFilter<Order>>();
 
-            app.MapPost("/orders", (OrderFV order) => Results.Ok(order)).AddFilter<ValidationFilter<OrderFV>>();
+            //app.MapPost("/orders", (OrderFV order) => Results.Ok(order)).AddFilter<ValidationFilter<OrderFV>>();
 
             return app;
         }
